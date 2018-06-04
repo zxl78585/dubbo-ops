@@ -79,7 +79,7 @@
         <tr>
             <td><input type="checkbox" name="ids" value="$provider.id"/></td>
             <td>
-                <a href="providers/$provider.id">#if($address)$tool.getSimpleName($provider.service)#else$provider.address#end</a>
+                <a href="providers/$provider.id">#if($address)$tool.getSimpleName($provider.service)#else${provider.address}-$tool.getSimpleName($provider.service)#end</a>
             </td>
             <td>$tool.getProviderWeight($provider)</td>
             <td>#if($provider.dynamic)<font color="green">$i18n.get("dynamic")</font>#else<font color="blue">$i18n.get(

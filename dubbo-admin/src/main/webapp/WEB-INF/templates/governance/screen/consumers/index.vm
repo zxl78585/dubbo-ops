@@ -111,7 +111,7 @@
         <tr>
             <td><input type="checkbox" name="ids" value="$consumer.id"/></td>
             <td>
-                <a href="consumers/$consumer.id">#if($address)$tool.getSimpleName($consumer.service)#else$consumer.address#end</a>
+                <a href="consumers/$consumer.id">#if($address)$tool.getSimpleName($consumer.service)#else${consumer.address}-$tool.getSimpleName($consumer.service)#end</a>
             </td>
             <td>$consumer.application</td>
             <td>
